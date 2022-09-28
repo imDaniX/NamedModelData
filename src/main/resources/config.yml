@@ -1,0 +1,22 @@
+# MATERIAL
+IRON_SHOVEL:
+  # CustomModelData value
+  # Required integer
+  '1':
+    # Item name
+    # Required string
+    name: 'magic wand'
+    # Ignore colors in the name
+    # Optional boolean, defaults to false
+    ignore-color: true
+    # Ignore case in the name
+    # Optional boolean, defaults to false
+    ignore-case: true
+  '5':
+    name: '&4Iron Shovel of Doom'
+DIAMOND:
+  '1':
+    name: '&cRuby'
+  '2':
+    name: 'Unalivemond'
+    ignore-color: true

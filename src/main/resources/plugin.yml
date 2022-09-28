@@ -1,0 +1,10 @@
+name: NamedModelData
+version: '${project.version}'
+main: me.imdanix.model.NmdPlugin
+api-version: 1.14
+authors: [ imDaniX ]
+description: '${project.description}'
+commands:
+  namedmodeldata:
+    aliases: [nmd]
+    permission: namedmodeldata.admin
