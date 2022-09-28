@@ -67,20 +67,20 @@ public final class NmdPlugin extends JavaPlugin implements Listener {
         ModelMap models = modelsByType.get(result.getType());
         if (models == null) return;
         ItemMeta resultMeta = result.getItemMeta();
-        if (!resultMeta.hasDisplayName()) {
-            ItemStack origin = event.getInventory().getItem(0);
-            if (origin == null || !origin.hasItemMeta()) return;
-            ItemMeta originMeta = origin.getItemMeta();
-            if (originMeta.hasCustomModelData() && models.containsValue(originMeta.getCustomModelData())) {
-                resultMeta.setCustomModelData(null);
-                result.setItemMeta(resultMeta);
-            }
-        } else {
+        if (resultMeta.hasDisplayName()) {
             Integer value = models.getByName(resultMeta.getDisplayName());
             if (value != null) {
                 resultMeta.setCustomModelData(value);
                 result.setItemMeta(resultMeta);
+                return;
             }
+        }
+        ItemStack origin = event.getInventory().getItem(0);
+        if (origin == null || !origin.hasItemMeta()) return;
+        ItemMeta originMeta = origin.getItemMeta();
+        if (originMeta.hasDisplayName() && models.getByName(originMeta.getDisplayName()) != null) {
+            resultMeta.setCustomModelData(null);
+            result.setItemMeta(resultMeta);
         }
     }
 
