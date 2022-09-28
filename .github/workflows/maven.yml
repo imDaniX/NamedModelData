@@ -33,5 +33,5 @@ jobs:
 
       - uses: actions/upload-artifact@main
         with:
-          name: ReActions
+          name: NamedModelData
           path: target/named-model-data-*.jar
