@@ -1,7 +1,7 @@
 # NamedModelData
 A simple Spigot plugin that allows you to apply CustomModelData tag to an item through anvil by item renaming, just like OptiFine.
 
-![https://i.imgur.com/aXJ22CQ.gif](https://i.imgur.com/aXJ22CQ.gif)
+![d8c4f9e637deed0566f573552a6eac75d98bc4bf](https://github.com/imDaniX/NamedModelData/assets/18292506/501c52cf-d354-443f-9026-51269a5ac911)
 
 NMD **doesn't offer** you any resource packs - you have to provide one to players yourself.
 CustomModelData will be applied only if you're renaming an item **through anvil**, so for existing item you have to reapply its name.
